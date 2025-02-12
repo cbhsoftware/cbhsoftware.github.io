@@ -1,0 +1,75 @@
+/* Body */
+body {
+    background-color: #00FFFF; /* Bright cyan background */
+    color: #000000; /* Black text */
+    font-family: 'Comic Sans MS', 'Courier New', sans-serif; /* Classic 90s fonts */
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #FF00FF; /* Magenta header */
+    color: #FFFF00; /* Yellow text */
+    padding: 20px;
+    border-bottom: 5px dashed #0000FF; /* Blue dashed border */
+}
+
+header .highlight {
+    color: #00FF00; /* Bright green highlight */
+    text-decoration: underline;
+}
+
+/* Marquee */
+marquee {
+    background-color: #FFFF00; /* Yellow background */
+    color: #FF0000; /* Red text */
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+/* Navigation */
+nav {
+    margin: 20px 0;
+    background-color: #0000FF; /* Blue background */
+    padding: 10px;
+    border: 3px solid #FF0000; /* Red border */
+}
+
+nav a {
+    color: #FFFFFF; /* White text */
+    font-size: 18px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    background-color: #FF0000; /* Red hover */
+    color: #FFFF00; /* Yellow text */
+    padding: 5px;
+}
+
+/* Table Layout */
+table {
+    margin: 0 auto;
+    background-color: #FFFFFF; /* White background */
+    border: 5px groove #0000FF; /* Grooved blue border */
+}
+
+h2, h3 {
+    color: #FF00FF; /* Magenta headings */
+    text-shadow: 2px 2px #000000; /* Black shadow for extra flair */
+}
+
+/* Footer */
+footer {
+    background-color: #000000; /* Black background */
+    color: #FFFFFF; /* White text */
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 3px solid #FFFF00; /* Yellow top border */
+}
+
+footer img {
+    margin: 10px 0;
+}
