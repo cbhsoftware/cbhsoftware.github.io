@@ -1,75 +1,232 @@
-/* Body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Orbitron', sans-serif;
+  background: black;
+  overflow: hidden;
+  color: #0ff;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #000 40%, #0ff1 100%);
+  animation: pulse 10s infinite alternate;
+  z-index: -2;
+}
+
+@keyframes pulse {
+  0% { filter: blur(0px); }
+  100% { filter: blur(4px); }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 2rem;
+}
+
+.neon-title {
+  font-size: 4rem;
+  color: #0ff;
+  text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #0ff5;
+  padding: 2rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px #0ff3;
+}
+
+.glow-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  color: #0ff;
+  border: 2px solid #0ff;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 0 5px #0ff, 0 0 15px #0ff3;
+}
+
+.glow-button:hover {
+  background-color: #0ff2;
+  box-shadow: 0 0 10px #0ff, 0 0 30px #0ff;
+  color: black;
+}
+
 body {
-    background-color: #00FFFF; /* Bright cyan background */
-    color: #000000; /* Black text */
-    font-family: 'Comic Sans MS', 'Courier New', sans-serif; /* Classic 90s fonts */
-    text-align: center;
+  background-color: #000;
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-/* Header */
-header {
-    background-color: #FF00FF; /* Magenta header */
-    color: #FFFF00; /* Yellow text */
-    padding: 20px;
-    border-bottom: 5px dashed #0000FF; /* Blue dashed border */
+.container {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 0 1rem;
 }
 
-header .highlight {
-    color: #00FF00; /* Bright green highlight */
-    text-decoration: underline;
+.neon-title {
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
 }
 
-/* Marquee */
-marquee {
-    background-color: #FFFF00; /* Yellow background */
-    color: #FF0000; /* Red text */
-    font-weight: bold;
-    padding: 5px 0;
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
 }
 
-/* Navigation */
-nav {
-    margin: 20px 0;
-    background-color: #0000FF; /* Blue background */
-    padding: 10px;
-    border: 3px solid #FF0000; /* Red border */
+.contact-list li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
 }
 
-nav a {
-    color: #FFFFFF; /* White text */
-    font-size: 18px;
-    text-decoration: none;
-    margin: 0 10px;
+.contact-list a {
+  color: #0ff;
+  text-decoration: none;
 }
 
-nav a:hover {
-    background-color: #FF0000; /* Red hover */
-    color: #FFFF00; /* Yellow text */
-    padding: 5px;
+.contact-list a:hover {
+  text-decoration: underline;
 }
 
-/* Table Layout */
-table {
-    margin: 0 auto;
-    background-color: #FFFFFF; /* White background */
-    border: 5px groove #0000FF; /* Grooved blue border */
+.description, .extra-note {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.projects-body {
+  display: flex;
+  margin: 0;
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #0d0d0d;
+  color: #fff;
 }
 
-h2, h3 {
-    color: #FF00FF; /* Magenta headings */
-    text-shadow: 2px 2px #000000; /* Black shadow for extra flair */
+.sidebar {
+  width: 250px;
+  background: #111;
+  padding: 2rem 1rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* Footer */
-footer {
-    background-color: #000000; /* Black background */
-    color: #FFFFFF; /* White text */
-    padding: 10px;
-    margin-top: 20px;
-    font-size: 14px;
-    border-top: 3px solid #FFFF00; /* Yellow top border */
+.sidebar h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #0ff;
 }
 
-footer img {
-    margin: 10px 0;
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
 }
+
+.sidebar nav li {
+  margin-bottom: 1rem;
+}
+
+.sidebar nav a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid transparent;
+  transition: 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background: #222;
+  border-left: 4px solid #0ff;
+  color: #0ff;
+}
+
+.sidebar footer {
+  font-size: 0.8rem;
+  text-align: center;
+  color: #777;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-shadow: 0 0 10px #0ff;
+}
+
+.intro {
+  margin-bottom: 2rem;
+  color: #aaa;
+}
+
+.project-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.project-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 8px #0ff2;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 16px #0ff8;
+}
+
+.project-card h3 {
+  color: #0ff;
+  margin-bottom: 0.5rem;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #0ff;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
