@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="3; URL=https://youtu.be/dQw4w9WgXcQ" /> -->
+    <title>BOG87 - Gift Card Giveaway</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111111;
+            background-image: radial-gradient(#222222, #111111);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: auto;
+        }
+
+        video {
+            max-width: 100%;
+            max-height: 50vh;
+        }
+
+        button {
+            background-color: #333;
+            border: turquoise;
+            border-width: 20;
+            border-radius: 20px;
+            text-decoration: none;
+            align-content: center;
+        }
+
+        @media only screen and (max-width: 500px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="playPause()">
+        <h1>
+            Click Here or Below to show code
+        </h1>
+        <video id="onlyfans" width="720" height="480" loop>
+            <source src="assets/video/giftcard.webm" type="video/webm">
+            <source src="assets/video/giftcard.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <script>
+    var myVideo = document.getElementById("onlyfans"); 
+    function playPause() { 
+        if (myVideo.paused) 
+            myVideo.play(); 
+        else 
+            myVideo.pause();
+        } 
+    </script>
+    
+        
+    </button>
+</body>
+</html>
